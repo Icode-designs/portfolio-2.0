@@ -39,10 +39,11 @@ const Home = () => {
           $marginL="auto"
           $marginR="auto"
         >
-          <PortraitContainer>
-            <img src={portrait} alt="portrait" />
-          </PortraitContainer>
-
+          <FlexContainer $align="center" $justify="center">
+            <PortraitContainer>
+              <img src={portrait} alt="portrait" />
+            </PortraitContainer>
+          </FlexContainer>
           <Article headerText={headerText} headerParagraph={headerParagraph}>
             <Button>Get In Touch</Button>
           </Article>

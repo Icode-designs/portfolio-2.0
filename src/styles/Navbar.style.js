@@ -7,6 +7,11 @@ export const HeaderContainer = styled.div`
   padding: 3rem 1.5rem;
   padding-bottom: 0;
   justify-content: space-between;
+
+  @media (min-width: 1024px) {
+    padding: 4rem 3rem;
+    padding-bottom: 0;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -30,6 +35,10 @@ export const Navbtn = styled.button`
   position: relative;
   z-index: 10;
   cursor: pointer;
+
+  @media (min-width: 700px) {
+    display: none;
+  }
 `;
 
 export const NavMenuContainer = styled.div`
@@ -51,6 +60,12 @@ export const NavMenuContainer = styled.div`
       transform: translateX(0px);
     }
   }
+
+  @media (min-width: 700px) {
+    background: none;
+    position: static;
+    height: fit-content;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -62,10 +77,20 @@ export const NavList = styled.ul`
     line-height: 4rem;
   }
 
-  a:link {
+  a {
     text-decoration: none;
     color: #333;
     font-size: 2rem;
     font-weight: bolder;
+  }
+
+  @media (min-width: 700px) {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
   }
 `;

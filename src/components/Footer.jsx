@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <FooterContainer>
-      <FlexContainer $flexD="column" $align="center">
+      <FlexContainer $justify="center">
         <Link to="/Home">
           <Logo />
         </Link>

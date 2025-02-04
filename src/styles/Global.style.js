@@ -11,7 +11,12 @@ export const FlexContainer = styled.div`
   margin-right: ${({ $marginR }) => $marginR};
   margin-left: ${({ $marginL }) => $marginL};
 
+  a {
+    width: fit-content;
+  }
+
   @media (min-width: 1024px) {
+    align-self: center;
     flex-direction: row !important;
     > * {
       max-width: 50%;

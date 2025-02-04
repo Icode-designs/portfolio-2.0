@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 //import styles
@@ -20,6 +20,24 @@ import Logo from "./Logo";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 700) {
+        setNavOpen(true);
+      } else {
+        setNavOpen(false);
+      }
+    };
+
+    // Run once on mount
+    handleResize();
+
+    // Listen for window resize
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [setNavOpen]);
 
   function handleClick() {
     setNavOpen(!navOpen);

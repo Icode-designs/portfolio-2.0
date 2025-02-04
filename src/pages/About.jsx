@@ -1,6 +1,7 @@
 import Article from "components/Article";
 import React from "react";
 import { AboutContainer } from "styles/About.style";
+import { SectionContainer } from "styles/Global.style";
 
 const About = () => {
   const aboutHeader = <>Here's a little something about me</>;
@@ -32,9 +33,11 @@ const About = () => {
     </>
   );
   return (
-    <AboutContainer>
-      <Article headerText={aboutHeader} headerParagraph={aboutParagraph} />
-    </AboutContainer>
+    <SectionContainer>
+      <AboutContainer>
+        <Article headerText={aboutHeader} headerParagraph={aboutParagraph} />
+      </AboutContainer>
+    </SectionContainer>
   );
 };
 

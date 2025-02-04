@@ -12,7 +12,7 @@ export const HomePageContainer = styled.div`
 `;
 
 export const PortraitContainer = styled.div`
-  max-width: 15.75rem;
+  max-width: 15.75rem !important;
   width: 100%;
   height: 15.75rem;
   border: solid 3px #7eadfc;
