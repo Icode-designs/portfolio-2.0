@@ -12,6 +12,10 @@ export const FeaturedProjectsContainer = styled.div`
   & > h1 {
     margin-bottom: 0.5rem;
   }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const ProjectImgContainer = styled.div`

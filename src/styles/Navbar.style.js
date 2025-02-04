@@ -12,6 +12,7 @@ export const HeaderContainer = styled.div`
 export const LogoContainer = styled.div`
   width: 100px;
   height: fit-content;
+  cursor: pointer;
 
   img {
     width: 100%;
@@ -28,6 +29,7 @@ export const Navbtn = styled.button`
   font-size: 1.5rem;
   position: relative;
   z-index: 10;
+  cursor: pointer;
 `;
 
 export const NavMenuContainer = styled.div`

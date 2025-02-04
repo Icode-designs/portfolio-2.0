@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 //import styles
 import {
@@ -25,7 +26,9 @@ const Navbar = () => {
   }
   return (
     <HeaderContainer>
-      <Logo />
+      <Link to="/Home">
+        <Logo />
+      </Link>
       <Navigation>
         <Navbtn onClick={handleClick}>
           {navOpen ? <FaTimes /> : <GiHamburgerMenu />}

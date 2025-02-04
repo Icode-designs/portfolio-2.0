@@ -3,10 +3,17 @@ import styled from "styled-components";
 export const HomePageContainer = styled.div`
   display: block;
   margin-top: 2.5rem;
+  @media (min-height: 1024px) {
+    padding-bottom: 6rem;
+    max-width: 900px;
+    width: 100%;
+    margin: 2.5rem auto;
+  }
 `;
 
 export const PortraitContainer = styled.div`
-  width: 15.75rem;
+  max-width: 15.75rem;
+  width: 100%;
   height: 15.75rem;
   border: solid 3px #7eadfc;
   overflow: hidden;

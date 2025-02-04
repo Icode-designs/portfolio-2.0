@@ -5,11 +5,12 @@ import {
   ArticleParagraph,
 } from "styles/Global.style";
 
-const Article = ({ headerText, headerParagraph }) => {
+const Article = ({ headerText, headerParagraph, children }) => {
   return (
     <ArticleContainer>
       <ArticleHeader>{headerText}</ArticleHeader>
       <ArticleParagraph>{headerParagraph}</ArticleParagraph>
+      {children}
     </ArticleContainer>
   );
 };

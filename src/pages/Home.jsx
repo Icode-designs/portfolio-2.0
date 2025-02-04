@@ -2,12 +2,18 @@ import React from "react";
 import portrait from "assets/img/portrait.jpg";
 
 //import styles
-import { BlueText, Button, FlexContainer } from "styles/Global.style";
+import {
+  BlueText,
+  Button,
+  FlexContainer,
+  SectionContainer,
+} from "styles/Global.style";
 import { HomePageContainer, PortraitContainer } from "styles/Home.style";
 import Article from "components/Article";
 import FeaturedProjects from "components/layouts/FeaturedProjects";
 
 const Home = () => {
+  const mediaQuery = window.matchMedia("(max-width: 1024px)");
   const headerText = (
     <>
       Hello there, i'm <BlueText>Bonaventure Ifechukwu</BlueText>
@@ -25,17 +31,25 @@ const Home = () => {
     </>
   );
   return (
-    <HomePageContainer>
-      <FlexContainer $align="center" $flexD="column">
-        <PortraitContainer>
-          <img src={portrait} alt="portrait" />
-        </PortraitContainer>
+    <SectionContainer>
+      <HomePageContainer>
+        <FlexContainer
+          $align="center"
+          $flexD="column"
+          $marginL="auto"
+          $marginR="auto"
+        >
+          <PortraitContainer>
+            <img src={portrait} alt="portrait" />
+          </PortraitContainer>
 
-        <Article headerText={headerText} headerParagraph={headerParagraph} />
-        <Button>Get In Touch</Button>
-      </FlexContainer>
-      <FeaturedProjects />
-    </HomePageContainer>
+          <Article headerText={headerText} headerParagraph={headerParagraph}>
+            <Button>Get In Touch</Button>
+          </Article>
+        </FlexContainer>
+        <FeaturedProjects />
+      </HomePageContainer>
+    </SectionContainer>
   );
 };
 

@@ -6,12 +6,41 @@ export const FlexContainer = styled.div`
   gap: ${({ $gap }) => $gap};
   justify-content: ${({ $justify }) => $justify};
   align-items: ${({ $align }) => $align};
+  margin-top: ${({ $marginT }) => $marginT};
+  margin-bottom: ${({ $marginB }) => $marginB};
+  margin-right: ${({ $marginR }) => $marginR};
+  margin-left: ${({ $marginL }) => $marginL};
+
+  @media (min-width: 1024px) {
+    flex-direction: row !important;
+    > * {
+      max-width: 50%;
+      width: 100%;
+    }
+  }
+`;
+
+export const SectionContainer = styled.section`
+  padding: 1rem 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    max-width: none !important;
+  }
 `;
 
 export const ArticleContainer = styled.article`
   text-align: center;
   padding: 2rem 1.5rem;
   color: #333;
+
+  @media (min-width: 1024px) {
+    text-align: left;
+  }
 `;
 
 export const BlueText = styled.span`
@@ -28,6 +57,7 @@ export const ArticleParagraph = styled.p`
   font-size: 0.75rem;
   line-height: 1.5rem;
   font-weight: 400;
+  margin-bottom: 1.5rem;
 `;
 
 export const Button = styled.button`
@@ -40,6 +70,7 @@ export const Button = styled.button`
   font-weight: 500;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 
   a {
     text-decoration: none;
@@ -77,6 +108,25 @@ export const FooterContainer = styled.footer`
   background-color: #333;
   margin-top: 2rem;
   padding: 1.5rem 1rem;
-  text-align: center;
   color: #fff;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  @media (min-height: 1024px) {
+    position: fixed;
+  }
+`;
+
+export const SocialIcon = styled.div`
+  color: #7eadfc;
+  font-size: 2.5rem;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+  }
 `;
