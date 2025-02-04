@@ -354,10 +354,11 @@ Please change the parent <Route path="${A}"> to <Route path="${A==="/"?"*":`${A}
   border-bottom: solid #333 1px;
 `,S1=()=>R.jsxs(v1,{action:"https://formspree.io/f/xanqjabo",method:"POST",children:[R.jsxs("div",{children:[R.jsx(la,{children:"Name"}),R.jsx(bf,{name:"name",type:"text",placeholder:"What is your name?"})]}),R.jsxs("div",{children:[R.jsx(la,{children:"Email"}),R.jsx(bf,{name:"email",type:"email",placeholder:"What is your email?"})]}),R.jsxs("div",{children:[R.jsx(la,{children:"Tell me..."}),R.jsx(w1,{name:"message",placeholder:"What is your message?"})]}),R.jsx(On,{type:"submit",children:"Submit"})]}),x1=()=>{const i=[{icon:R.jsx(My,{}),link:"https://github.com/Icode-designs"},{icon:R.jsx(Ay,{}),link:"https://x.com/Alexanderosakwe"},{icon:R.jsx($y,{}),link:"https://www.instagram.com/_himbonaventure/"},{icon:R.jsx(Uy,{}),link:"https://wa.me/2349120026574"}];return R.jsxs(y1,{children:[R.jsx(S1,{}),R.jsx(hr,{$marginT:"3rem",$gap:"1rem",$justify:"center",children:i.map((o,a)=>R.jsx(Yy,{children:R.jsx("a",{href:o.link,target:"_blank",rel:"noopener noreferrer",children:o.icon})},a))})]})};function k1(){const[i,o]=j.useState(!1);return R.jsxs(R.Fragment,{children:[R.jsx(E1,{$navopen:i}),R.jsx(Zy,{navOpen:i,setNavOpen:o}),R.jsxs(Wm,{children:[R.jsx(ui,{path:"/",element:R.jsx(d1,{})}),R.jsx(ui,{path:"/projects",element:R.jsx(h1,{})}),R.jsx(ui,{path:"/about",element:R.jsx(g1,{})}),R.jsx(ui,{path:"/contact",element:R.jsx(x1,{})})]}),R.jsx(qy,{})]})}const E1=Ey`
   html, body {
-    overflow: ${({$navopen:i})=>i?"hidden":"scroll"};
+    overflow: ${({$navopen:i})=>i?"hidden":"initial"};
+    
 
     @media (min-width: 700px) {
-      overflow: scroll;
+      overflow: initial;
     }
   }
 `;qh.createRoot(document.getElementById("root")).render(R.jsx(j.StrictMode,{children:R.jsx(pg,{children:R.jsx(k1,{})})}));
