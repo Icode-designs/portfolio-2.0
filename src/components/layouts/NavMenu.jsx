@@ -7,7 +7,7 @@ const NavMenu = () => {
     <NavMenuContainer>
       <NavList>
         <li>
-          <Link to="/Home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/Projects">Projects</Link>

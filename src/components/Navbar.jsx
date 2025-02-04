@@ -44,7 +44,7 @@ const Navbar = () => {
   }
   return (
     <HeaderContainer>
-      <Link to="/Home">
+      <Link to="/">
         <Logo />
       </Link>
       <Navigation>

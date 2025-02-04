@@ -84,6 +84,10 @@ export const NavList = styled.ul`
     font-weight: bolder;
   }
 
+  a:active {
+    color: rgb(41, 60, 231);
+  }
+
   @media (min-width: 700px) {
     display: flex;
     gap: 1rem;
@@ -91,6 +95,10 @@ export const NavList = styled.ul`
     a {
       font-size: 1.25rem;
       font-weight: 400;
+    }
+
+    a:active {
+      color: #7eadfc;
     }
   }
 `;
